@@ -5,15 +5,15 @@
 class Lerd < Formula
   desc "Local Laravel development environment for Linux and macOS"
   homepage "https://lerd.sh"
-  version "1.27.1"
+  version "1.28.0"
   license "MIT"
 
   depends_on "podman"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/geodro/lerd/releases/download/v1.27.1/lerd_1.27.1_darwin_amd64.tar.gz"
-    sha256 "4188400fac24e4d2fd4a71b81ef3caa8b3f23c6acac225177296932ffa501b19"
+    url "https://github.com/lerd-env/lerd/releases/download/v1.28.0/lerd_1.28.0_darwin_amd64.tar.gz"
+    sha256 "8ffcd8093ed76667c184735dcd1e30dc57eaeb369d722e7784b8ae5ff23b4ed9"
 
     define_method(:install) do
       bin.install "lerd"
@@ -21,8 +21,8 @@ class Lerd < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/geodro/lerd/releases/download/v1.27.1/lerd_1.27.1_darwin_arm64.tar.gz"
-    sha256 "bec9727cd806bb620b4dcc7c638f5175e8f1440f87cbf47d21e79f25002824a0"
+    url "https://github.com/lerd-env/lerd/releases/download/v1.28.0/lerd_1.28.0_darwin_arm64.tar.gz"
+    sha256 "ab955e4d569a3d95571ea651c16b968eebcc08a849bda6ab164786e11ea99bf8"
 
     define_method(:install) do
       bin.install "lerd"
