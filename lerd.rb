@@ -13,7 +13,7 @@ class Lerd < Formula
 
   if Hardware::CPU.intel?
     url "https://github.com/lerd-env/lerd/releases/download/v1.30.1/lerd_1.30.1_darwin_amd64.tar.gz"
-    sha256 "6586658d90339c6bed3f248a1ae09440b6147984bb28a01c64da544ca61efea2"
+    sha256 "93880740565f7e62a8c389f8b0fff6e747239dbfd644d4636a93c0b2f8f98174"
 
     define_method(:install) do
       bin.install "lerd"
@@ -22,7 +22,7 @@ class Lerd < Formula
   end
   if Hardware::CPU.arm?
     url "https://github.com/lerd-env/lerd/releases/download/v1.30.1/lerd_1.30.1_darwin_arm64.tar.gz"
-    sha256 "19f09fbd787dd8da2d22a81c94c00127d1093b3aee5be41420ecfe95b8d3c046"
+    sha256 "b42b80f7f948abced9105ceff61e02ac1ddc0f7396f4af961ee42e544a2883af"
 
     define_method(:install) do
       bin.install "lerd"
