@@ -5,15 +5,15 @@
 class Lerd < Formula
   desc "Local Laravel development environment for Linux and macOS"
   homepage "https://lerd.sh"
-  version "1.34.2"
+  version "1.34.3"
   license "MIT"
 
   depends_on "podman" if OS.mac?
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lerd-env/lerd/releases/download/v1.34.2/lerd_1.34.2_darwin_amd64.tar.gz"
-      sha256 "59b2293b27cbf32240909a34d2ba7b676ffb37886e9652ba2e444beb885b9185"
+      url "https://github.com/lerd-env/lerd/releases/download/v1.34.3/lerd_1.34.3_darwin_amd64.tar.gz"
+      sha256 "e1dcfa6ea1ad00453db05c398c3362da3bfe3ff1dc995ea07f544b6e27698b72"
 
       define_method(:install) do
         bin.install "lerd"
@@ -21,8 +21,8 @@ class Lerd < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lerd-env/lerd/releases/download/v1.34.2/lerd_1.34.2_darwin_arm64.tar.gz"
-      sha256 "ed720e1d97067bf31c3f37caf5a99af35f46941251d1e8bfac420a41061674d6"
+      url "https://github.com/lerd-env/lerd/releases/download/v1.34.3/lerd_1.34.3_darwin_arm64.tar.gz"
+      sha256 "b1e5d3720b4739a193b093df8230a43639db333a82a11a15f632b14919c53ca2"
 
       define_method(:install) do
         bin.install "lerd"
@@ -33,16 +33,16 @@ class Lerd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lerd-env/lerd/releases/download/v1.34.2/lerd_1.34.2_linux_amd64.tar.gz"
-      sha256 "6e1be4bdd1fa38c98f0480ad52ec1945153855754303c116082ce2418daed051"
+      url "https://github.com/lerd-env/lerd/releases/download/v1.34.3/lerd_1.34.3_linux_amd64.tar.gz"
+      sha256 "f216e53def5f3f87d8ff66874200e97c200033ab92a3b1bb643eed5338b6fb33"
       define_method(:install) do
         bin.install "lerd"
         bin.install "lerd-tray" if File.exist?("lerd-tray")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lerd-env/lerd/releases/download/v1.34.2/lerd_1.34.2_linux_arm64.tar.gz"
-      sha256 "eb01b77336fea383c1749e31cf4d70bca79f2bae8924d7a70658572267910069"
+      url "https://github.com/lerd-env/lerd/releases/download/v1.34.3/lerd_1.34.3_linux_arm64.tar.gz"
+      sha256 "d690e6ca48691cd82d9032e893c614f76ae161771901be7e5648a4fd9e1349f8"
       define_method(:install) do
         bin.install "lerd"
         bin.install "lerd-tray" if File.exist?("lerd-tray")
