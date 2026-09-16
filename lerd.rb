@@ -13,7 +13,7 @@ class Lerd < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/lerd-env/lerd/releases/download/v1.35.0/lerd_1.35.0_darwin_amd64.tar.gz"
-      sha256 "9f7593326e4f05d4686da79af2d7df88e209486c2b5b4ccb39daf393405a3e84"
+      sha256 "34db26f5614f163f881343a4b556ee2ed402dc9505c387c9a8b2239fcfa51f6e"
 
       define_method(:install) do
         bin.install "lerd"
@@ -22,7 +22,7 @@ class Lerd < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/lerd-env/lerd/releases/download/v1.35.0/lerd_1.35.0_darwin_arm64.tar.gz"
-      sha256 "b87c69d31557e22140306e80e77d00e1e54e0cbf32bbd5e8de944dbcb3b481ce"
+      sha256 "a97a834678caa77822626488839928a997438c07ca9770c494d1aba1aaac2db9"
 
       define_method(:install) do
         bin.install "lerd"
@@ -34,7 +34,7 @@ class Lerd < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/lerd-env/lerd/releases/download/v1.35.0/lerd_1.35.0_linux_amd64.tar.gz"
-      sha256 "2ec2200d4775c4d90791277057efc06ad8625d1364f1e3718536ba73eed0e2ce"
+      sha256 "29d707e0f3c9a3f488d5579869a78a19b48481b468489f16e5dedb3ddaeb086f"
       define_method(:install) do
         bin.install "lerd"
         bin.install "lerd-tray" if File.exist?("lerd-tray")
@@ -42,7 +42,7 @@ class Lerd < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/lerd-env/lerd/releases/download/v1.35.0/lerd_1.35.0_linux_arm64.tar.gz"
-      sha256 "92d5d8ac30fb9e2b2bdb0aba41d7e092671676268b5554acec78ca9d263362d4"
+      sha256 "88bc293fa25564f90fd8ff10f3c3c0f235b00e22471fb6ea2efb5cc76d6efc70"
       define_method(:install) do
         bin.install "lerd"
         bin.install "lerd-tray" if File.exist?("lerd-tray")
